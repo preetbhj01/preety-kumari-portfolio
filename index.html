@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Preety Kumari — 3D visualization and creative portfolio.">
+<title>Preety Kumari — 3D & Creative Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#090a0b;--fg:#f4f2ec;--muted:#999993;--line:#282a2b;--card:#111314;--accent:#d9ff63;--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font-family:Manrope,Arial,sans-serif;line-height:1.55}a{color:inherit;text-decoration:none}.wrap{width:min(calc(100% - 48px),var(--max));margin:auto}.mono{font-family:'DM Mono',monospace;text-transform:uppercase;font-size:11px;letter-spacing:.13em;color:var(--muted)}
+nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-size:20px;font-weight:800;letter-spacing:-.05em}.brand span{color:var(--accent)}.navlinks{display:flex;gap:28px}.navlinks a{font-size:13px;color:#c8c8c2}.navlinks a:hover{color:var(--accent)}
+.hero{min-height:680px;display:grid;grid-template-columns:1.2fr .8fr;align-items:end;padding:100px 0 76px;border-bottom:1px solid var(--line)}.eyebrow{margin-bottom:25px}.hero h1{font-size:clamp(64px,10vw,142px);line-height:.84;letter-spacing:-.08em;margin:0;max-width:900px}.hero h1 em{font-style:normal;color:var(--accent)}.hero-copy{align-self:end;max-width:410px;margin-left:auto;color:#b9b8b2;font-size:15px}.hero-actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}.button{border:1px solid #555;padding:13px 18px;border-radius:999px;font-size:11px;text-transform:uppercase;letter-spacing:.09em}.button.primary{background:var(--accent);color:#090a0b;border-color:var(--accent)}
+section{padding:110px 0;border-bottom:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:start;margin-bottom:55px}.section-head h2{font-size:clamp(42px,6vw,78px);letter-spacing:-.07em;line-height:.9;margin:0}.intro{max-width:440px;color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:var(--card);border:1px solid var(--line);padding:14px;transition:.25s}.card:hover{transform:translateY(-5px);border-color:#555}.thumb{aspect-ratio:16/11;overflow:hidden;background:#17191a;border:1px solid #282828}.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}.card:hover .thumb img{transform:scale(1.025)}.card-body{padding:18px 10px 12px}.card h3{font-size:29px;letter-spacing:-.045em;margin:10px 0 7px}.card p{font-size:13px;color:var(--muted);margin:0 0 18px}.tag{color:var(--accent)}
+.case{display:grid;grid-template-columns:.85fr 1.15fr;gap:65px;padding:80px 0;border-top:1px solid var(--line)}.case:first-of-type{border-top:0;padding-top:10px}.case h3{font-size:clamp(38px,5vw,65px);line-height:.93;letter-spacing:-.065em;margin:8px 0 22px}.case .lead{color:#b9b8b2;font-size:15px;max-width:510px}.project-image{margin-top:30px;border:1px solid var(--line);background:#111;overflow:hidden}.project-image img{display:block;width:100%;height:auto}.facts{display:grid;grid-template-columns:1fr 1fr;gap:24px 34px;margin-top:8px}.facts div{border-top:1px solid var(--line);padding-top:14px}.facts b{display:block;font-size:13px;margin-top:6px;color:#e2e1dc}.detail{margin-top:35px}.detail h4{font-size:14px;margin:0 0 8px}.detail p{font-size:13px;color:var(--muted);margin:0 0 22px;max-width:620px}.deliverables{display:flex;flex-wrap:wrap;gap:8px}.pill{border:1px solid #353738;border-radius:999px;padding:8px 11px;font-size:10px;color:#c7c7c1}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:80px}.about h2{font-size:clamp(45px,6vw,82px);letter-spacing:-.07em;line-height:.9;margin:0}.about p{font-size:17px;color:#b7b6b0;max-width:570px}.skills{display:flex;flex-wrap:wrap;gap:9px;margin-top:30px}.skill{border:1px solid #353535;border-radius:999px;padding:9px 12px;font-size:11px;color:#c8c6bf}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line)}.step{background:var(--bg);padding:28px 22px;min-height:205px}.step .num{font-size:12px;color:var(--accent);font-family:'DM Mono'}.step h3{font-size:20px;margin:30px 0 10px}.step p{font-size:12px;color:var(--muted)}
+.contact{padding:130px 0 80px;text-align:center}.contact h2{font-size:clamp(55px,9vw,120px);line-height:.85;letter-spacing:-.08em;margin:0 auto 30px}.email{font-size:clamp(18px,3vw,30px);color:var(--accent);word-break:break-word}.footer{display:flex;justify-content:space-between;padding:25px 0;color:#777;border-top:1px solid var(--line);font-size:11px}.linkedin{color:#ddd}.linkedin:hover{color:var(--accent)}
+@media(max-width:800px){.wrap{width:min(calc(100% - 30px),var(--max))}.navlinks{display:none}.hero{grid-template-columns:1fr;min-height:auto;padding:75px 0}.hero-copy{margin:55px 0 0}.grid,.case,.about{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.section-head{display:block}.intro{margin-top:25px}.case{gap:35px}.facts{grid-template-columns:1fr 1fr}.footer{gap:15px;flex-direction:column}.contact{text-align:left}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.facts{grid-template-columns:1fr}.hero h1{font-size:clamp(58px,19vw,100px)}section{padding:80px 0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+<a class="brand" href="#top">PREETY<span>.</span></a>
+<div class="navlinks"><a href="#work">Work</a><a href="#cases">Case Studies</a><a href="#about">About</a><a href="#process">Process</a><a href="#contact">Contact</a></div>
+</nav>
+
+<main id="top">
+<section class="hero">
+<div>
+<div class="mono eyebrow">3D Visualization · Creative Portfolio · Preety Kumari</div>
+<h1>Ideas into<br><em>visuals.</em></h1>
+</div>
+<div class="hero-copy">
+<p>A focused portfolio presenting 3D environments, character visualization and structured project breakdowns—from concept and modeling layout to materials, details and final presentation.</p>
+<div class="hero-actions"><a class="button primary" href="#work">Explore work ↓</a><a class="button" href="#contact">Get in touch</a></div>
+</div>
+</section>
+
+<section id="work">
+<div class="section-head"><h2>Selected<br>work</h2><p class="intro">Two featured visual projects built around clear composition, believable detail and presentation-ready documentation. Each project shows both the final result and the underlying 3D workflow.</p></div>
+<div class="grid">
+<a class="card" href="#study">
+<div class="thumb"><img src="assets/cozy-study-workspace.png" alt="Cozy study workspace 3D environment project board"></div>
+<div class="card-body"><div class="mono tag">01 · 3D Environment</div><h3>Cozy Study Workspace</h3><p>Warm interior environment with modular assets, lighting, material studies and a complete scene breakdown.</p><span class="mono">View case study →</span></div>
+</a>
+<a class="card" href="#character">
+<div class="thumb"><img src="assets/3d-character-turnaround.png" alt="3D character turnaround and modeling project board"></div>
+<div class="card-body"><div class="mono tag">02 · 3D Character</div><h3>Character Turnaround</h3><p>Stylized character presentation covering turnaround views, expressions, wireframe, texture maps and detail studies.</p><span class="mono">View case study →</span></div>
+</a>
+</div>
+</section>
+
+<section id="cases">
+<div class="section-head"><h2>Case<br>studies</h2><p class="intro">The project pages are structured to communicate intent, process and deliverables quickly—useful for recruiters, clients and creative collaborators.</p></div>
+
+<article class="case" id="study">
+<div>
+<div class="mono">01 / 3D ENVIRONMENT</div>
+<h3>Cozy Study Workspace.</h3>
+<p class="lead">A presentation-ready interior scene designed around a calm, productive workspace. The visual language combines warm daylight, practical task lighting, natural materials and layered décor to create depth and a lived-in feel.</p>
+<div class="project-image"><img src="assets/cozy-study-workspace.png" alt="Cozy Study Workspace detailed 3D environment breakdown"></div>
+</div>
+<div>
+<div class="facts">
+<div><span class="mono">Project type</span><b>3D Environment / Interior</b></div>
+<div><span class="mono">Visual direction</span><b>Warm · Modern · Lived-in</b></div>
+<div><span class="mono">Core focus</span><b>Composition · Lighting · Materials</b></div>
+<div><span class="mono">Presentation</span><b>Final render + breakdown board</b></div>
+</div>
+<div class="detail">
+<h4>Objective</h4>
+<p>Create a visually coherent workspace where the primary desk area reads immediately, while secondary assets support scale, personality and depth.</p>
+<h4>Approach</h4>
+<p>The scene is organized into a clear visual hierarchy: window light establishes atmosphere, the desk anchors the composition, and shelves, plants, books, pin-board elements and lighting create secondary points of interest.</p>
+<h4>3D breakdown</h4>
+<p>The project documents the base model, textured model and wireframe, followed by material maps and focused studies of wood, drawers, chair, shelf, plant and lamp assets.</p>
+<h4>Key deliverables</h4>
+<div class="deliverables"><span class="pill">Final environment render</span><span class="pill">Scene overview</span><span class="pill">Asset detail studies</span><span class="pill">Base / textured model</span><span class="pill">Wireframe view</span><span class="pill">Texture maps</span></div>
+</div>
+</div>
+</article>
+
+<article class="case" id="character">
+<div>
+<div class="mono">02 / 3D CHARACTER</div>
+<h3>Character Turnaround.</h3>
+<p class="lead">A stylized character presentation focused on consistency across views and expressions. The board combines a hero render with front, side and back references, wireframe visualization and material/detail studies.</p>
+<div class="project-image"><img src="assets/3d-character-turnaround.png" alt="Stylized 3D character turnaround and modeling breakdown"></div>
+</div>
+<div>
+<div class="facts">
+<div><span class="mono">Project type</span><b>3D Character / Stylized</b></div>
+<div><span class="mono">Character design</span><b>Friendly · Contemporary</b></div>
+<div><span class="mono">Core focus</span><b>Form · Hair · Clothing · Face</b></div>
+<div><span class="mono">Presentation</span><b>Turnaround + expression sheet</b></div>
+</div>
+<div class="detail">
+<h4>Objective</h4>
+<p>Build a character reference board that communicates the model from every important angle while demonstrating how the final look is supported by modeling and material work.</p>
+<h4>Approach</h4>
+<p>The character is presented through a hero pose and consistent front, right, back and left views. Facial expressions extend the model beyond a static asset and demonstrate visual range.</p>
+<h4>Technical breakdown</h4>
+<p>The lower panel documents the base model, textured model and wireframe alongside albedo, normal, roughness and ambient-occlusion maps. Close-ups highlight eye, hair, fabric and shoe materials.</p>
+<h4>Key deliverables</h4>
+<div class="deliverables"><span class="pill">Hero character render</span><span class="pill">4-view turnaround</span><span class="pill">Wireframe</span><span class="pill">Expression sheet</span><span class="pill">Texture maps</span><span class="pill">Material details</span></div>
+</div>
+</div>
+</article>
+</section>
+
+<section id="about">
+<div class="about">
+<div><div class="mono">Profile</div><h2>Creative +<br>detail focused.</h2></div>
+<div>
+<p>I’m Preety Kumari. I use structured visual thinking to turn ideas into polished, easy-to-understand presentations. My portfolio focuses on 3D visualization, scene composition, character presentation and the details that make a project feel complete.</p>
+<div class="skills"><span class="skill">3D Visualization</span><span class="skill">Environment Design</span><span class="skill">Character Presentation</span><span class="skill">Lighting & Composition</span><span class="skill">Materials & Textures</span><span class="skill">Visual Storytelling</span><span class="skill">Project Presentation</span><span class="skill">Attention to Detail</span></div>
+</div>
+</div>
+</section>
+
+<section id="process">
+<div class="section-head"><h2>From concept<br>to final.</h2><p class="intro">A practical workflow that keeps visual quality, structure and presentation aligned throughout the project.</p></div>
+<div class="steps">
+<div class="step"><span class="num">01</span><h3>Define</h3><p>Clarify the subject, visual goal, reference direction and final presentation needs.</p></div>
+<div class="step"><span class="num">02</span><h3>Blockout</h3><p>Establish proportions, camera, composition and the major forms before adding detail.</p></div>
+<div class="step"><span class="num">03</span><h3>Build</h3><p>Develop geometry, assets, clothing, surfaces and scene elements with consistency.</p></div>
+<div class="step"><span class="num">04</span><h3>Refine</h3><p>Improve materials, lighting, textures and small details that strengthen the final read.</p></div>
+<div class="step"><span class="num">05</span><h3>Present</h3><p>Package the final render with turnarounds, breakdowns and focused detail studies.</p></div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<div class="mono">Have a project in mind?</div>
+<h2>Let's create<br>something useful.</h2>
+<a class="email" href="mailto:preet.bhj.01@gmail.com">preet.bhj.01@gmail.com ↗</a>
+<p style="margin-top:24px"><a class="linkedin" href="https://www.linkedin.com/in/preety-bharadwaj-895589442" target="_blank" rel="noopener">LinkedIn ↗</a></p>
+</section>
+</main>
+
+<footer class="footer"><span>© 2026 Preety Kumari</span><span>3D Visualization · Creative Portfolio · India</span></footer>
+</div>
+</body>
+</html>
